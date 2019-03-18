@@ -1,0 +1,498 @@
+pint: command not found
+root@CC2-24:/home/s4d1# ping -c
+ping: option requires an argument -- 'c'
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+root@CC2-24:/home/s4d1# ping --c
+ping: invalid option -- '-'
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+root@CC2-24:/home/s4d1# pint -i
+No command 'pint' found, did you mean:
+ Command 'ping' from package 'inetutils-ping' (universe)
+ Command 'ping' from package 'iputils-ping' (main)
+ Command 'pinq' from package 'qmail' (universe)
+ Command 'pinto' from package 'pinto' (universe)
+ Command 'tint' from package 'tint' (universe)
+ Command 'print' from package 'mime-support' (main)
+ Command 'pinot' from package 'pinot' (universe)
+ Command 'pinta' from package 'pinta' (universe)
+pint: command not found
+root@CC2-24:/home/s4d1# route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         192.168.0.22    0.0.0.0         UG    0      0        0 eth0
+default         192.168.0.20    0.0.0.0         UG    0      0        0 eth0
+192.168.0.0     *               255.255.255.0   U     1      0        0 eth0
+root@CC2-24:/home/s4d1# route delete gw 192.168.0.22
+gw: Host name lookup failure
+root@CC2-24:/home/s4d1# route delete default gw 192.168.0.22
+root@CC2-24:/home/s4d1# route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         192.168.0.20    0.0.0.0         UG    0      0        0 eth0
+192.168.0.0     *               255.255.255.0   U     1      0        0 eth0
+root@CC2-24:/home/s4d1# route delete default gw 192.168.0.20
+root@CC2-24:/home/s4d1# route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+192.168.0.0     *               255.255.255.0   U     1      0        0 eth0
+root@CC2-24:/home/s4d1# ping
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+root@CC2-24:/home/s4d1# ping -m
+ping: option requires an argument -- 'm'
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+root@CC2-24:/home/s4d1# ping -c
+ping: option requires an argument -- 'c'
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+root@CC2-24:/home/s4d1# sudo ping -c
+ping: option requires an argument -- 'c'
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+root@CC2-24:/home/s4d1# sudo ping -v
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+root@CC2-24:/home/s4d1# ping -v
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+root@CC2-24:/home/s4d1# ping --count
+ping: invalid option -- '-'
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+root@CC2-24:/home/s4d1# ping www.geeksforgeeks.org
+ping: unknown host www.geeksforgeeks.org
+root@CC2-24:/home/s4d1# host www.google.com
+Host www.google.com not found: 5(REFUSED)
+root@CC2-24:/home/s4d1# host google.com
+Host google.com not found: 5(REFUSED)
+root@CC2-24:/home/s4d1# host geekforgeeks.com
+Host geekforgeeks.com not found: 5(REFUSED)
+root@CC2-24:/home/s4d1# host gdfsafsadfsa.com
+Host gdfsafsadfsa.com not found: 5(REFUSED)
+root@CC2-24:/home/s4d1# host http://192.168.0.2.com
+Host http://192.168.0.2.com not found: 5(REFUSED)
+root@CC2-24:/home/s4d1# ^C
+root@CC2-24:/home/s4d1# ssh cs17d21@192.168.0.30
+The authenticity of host '192.168.0.30 (192.168.0.30)' can't be established.
+ECDSA key fingerprint is d8:e8:3a:9a:e6:9d:37:9c:e9:3b:8d:e3:eb:eb:36:a0.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added '192.168.0.30' (ECDSA) to the list of known hosts.
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+cs17d21@192.168.0.30's password: 
+Welcome to elementary OS 0.4.1 Loki (GNU/Linux 4.13.0-32-generic x86_64)
+
+ * Website:  http://elementary.io/
+
+275 packages can be updated.
+0 updates are security updates.
+
+
+The programs included with elementary OS are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+elementary OS comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+$ ls
+examples.desktop
+$ mkdir test
+$ ls
+examples.desktop  test
+$ rm test
+rm: cannot remove 'test': Is a directory
+$ rmdir test
+$ ls
+examples.desktop
+$ gedit examples.desktop
+Failed to connect to Mir: Failed to connect to server socket: No such file or directory
+Unable to init server: Could not connect: Connection refused
+
+(gedit:19849): Gtk-WARNING **: cannot open display: 
+$ pwd 
+/home/cs17d21
+$ ping 192.168.0.30
+PING 192.168.0.30 (192.168.0.30) 56(84) bytes of data.
+64 bytes from 192.168.0.30: icmp_seq=1 ttl=64 time=0.033 ms
+64 bytes from 192.168.0.30: icmp_seq=2 ttl=64 time=0.021 ms
+64 bytes from 192.168.0.30: icmp_seq=3 ttl=64 time=0.023 ms
+64 bytes from 192.168.0.30: icmp_seq=4 ttl=64 time=0.023 ms
+64 bytes from 192.168.0.30: icmp_seq=5 ttl=64 time=0.022 ms
+64 bytes from 192.168.0.30: icmp_seq=6 ttl=64 time=0.022 ms
+64 bytes from 192.168.0.30: icmp_seq=7 ttl=64 time=0.021 ms
+64 bytes from 192.168.0.30: icmp_seq=8 ttl=64 time=0.022 ms
+64 bytes from 192.168.0.30: icmp_seq=9 ttl=64 time=0.022 ms
+64 bytes from 192.168.0.30: icmp_seq=10 ttl=64 time=0.022 ms
+64 bytes from 192.168.0.30: icmp_seq=11 ttl=64 time=0.022 ms
+64 bytes from 192.168.0.30: icmp_seq=12 ttl=64 time=0.024 ms
+64 bytes from 192.168.0.30: icmp_seq=13 ttl=64 time=0.023 ms
+64 bytes from 192.168.0.30: icmp_seq=14 ttl=64 time=0.023 ms
+64 bytes from 192.168.0.30: icmp_seq=15 ttl=64 time=0.021 ms
+64 bytes from 192.168.0.30: icmp_seq=16 ttl=64 time=0.021 ms
+^C
+--- 192.168.0.30 ping statistics ---
+16 packets transmitted, 16 received, 0% packet loss, time 15366ms
+rtt min/avg/max/mdev = 0.021/0.022/0.033/0.006 ms
+$ ping hostname="www.google.com"   
+ping: unknown host hostname=www.google.com
+$ ping hostname="www.google.co.in"
+ping: unknown host hostname=www.google.co.in
+$ ping 192.168.0.20
+PING 192.168.0.20 (192.168.0.20) 56(84) bytes of data.
+64 bytes from 192.168.0.20: icmp_seq=1 ttl=64 time=0.155 ms
+64 bytes from 192.168.0.20: icmp_seq=2 ttl=64 time=0.158 ms
+64 bytes from 192.168.0.20: icmp_seq=3 ttl=64 time=0.157 ms
+^C
+--- 192.168.0.20 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2030ms
+rtt min/avg/max/mdev = 0.155/0.156/0.158/0.014 ms
+$ ping www.google.com
+PING www.google.com (172.217.161.4) 56(84) bytes of data.
+64 bytes from del03s10-in-f4.1e100.net (172.217.161.4): icmp_seq=1 ttl=54 time=51.5 ms
+64 bytes from del03s10-in-f4.1e100.net (172.217.161.4): icmp_seq=2 ttl=54 time=51.5 ms
+64 bytes from del03s10-in-f4.1e100.net (172.217.161.4): icmp_seq=3 ttl=54 time=51.8 ms
+64 bytes from del03s10-in-f4.1e100.net (172.217.161.4): icmp_seq=4 ttl=54 time=56.1 ms
+64 bytes from del03s10-in-f4.1e100.net (172.217.161.4): icmp_seq=5 ttl=54 time=52.0 ms
+64 bytes from del03s10-in-f4.1e100.net (172.217.161.4): icmp_seq=6 ttl=54 time=56.9 ms
+64 bytes from del03s10-in-f4.1e100.net (172.217.161.4): icmp_seq=7 ttl=54 time=55.7 ms
+^C
+--- www.google.com ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6009ms
+rtt min/avg/max/mdev = 51.579/53.711/56.941/2.283 ms
+$ exit
+Connection to 192.168.0.30 closed.
+root@CC2-24:/home/s4d1# ftp 192.168.0.30
+Connected to 192.168.0.30.
+220 (vsFTPd 3.0.3)
+Name (192.168.0.30:s4d1): jo
+331 Please specify the password.
+Password:
+
+12530 Login incorrect.
+Login failed.
+ftp> 
+ftp> exit
+221 Goodbye.
+root@CC2-24:/home/s4d1# ftp 192.168.0.30
+Connected to 192.168.0.30.
+220 (vsFTPd 3.0.3)
+Name (192.168.0.30:s4d1): cs17d21
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> exit
+221 Goodbye.
+root@CC2-24:/home/s4d1# ftp 192.168.0.30
+Connected to 192.168.0.30.
+220 (vsFTPd 3.0.3)
+Name (192.168.0.30:s4d1): jo
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> exit
+221 Goodbye.
+root@CC2-24:/home/s4d1# ftp 192.168.0.30
+Connected to 192.168.0.30.
+220 (vsFTPd 3.0.3)
+Name (192.168.0.30:s4d1): cs17d21@192.168.0.30
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> exit
+221 Goodbye.
+root@CC2-24:/home/s4d1# ftp 192.168.0.30
+Connected to 192.168.0.30.
+220 (vsFTPd 3.0.3)
+Name (192.168.0.30:s4d1): exit          
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> exit
+221 Goodbye.
+root@CC2-24:/home/s4d1# ftp cs17d21@192.168.0.30
+ftp: cs17d21@192.168.0.30: Name or service not known
+ftp> ls
+Not connected.
+ftp> dir
+Not connected.
+ftp> exit
+root@CC2-24:/home/s4d1# ftp cs17d21@192.168.0.30
+ftp: cs17d21@192.168.0.30: Name or service not known
+ftp> dir
+Not connected.
+ftp> exit
+root@CC2-24:/home/s4d1# sftp cs17d21@192.168.0.30
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+cs17d21@192.168.0.30's password: 
+Connected to 192.168.0.30.
+sftp> help
+Available commands:
+bye                                Quit sftp
+cd path                            Change remote directory to 'path'
+chgrp grp path                     Change group of file 'path' to 'grp'
+chmod mode path                    Change permissions of file 'path' to 'mode'
+chown own path                     Change owner of file 'path' to 'own'
+df [-hi] [path]                    Display statistics for current directory or
+                                   filesystem containing 'path'
+exit                               Quit sftp
+get [-Ppr] remote [local]          Download file
+reget remote [local]		Resume download file
+help                               Display this help text
+lcd path                           Change local directory to 'path'
+lls [ls-options [path]]            Display local directory listing
+lmkdir path                        Create local directory
+ln [-s] oldpath newpath            Link remote file (-s for symlink)
+lpwd                               Print local working directory
+ls [-1afhlnrSt] [path]             Display remote directory listing
+lumask umask                       Set local umask to 'umask'
+mkdir path                         Create remote directory
+progress                           Toggle display of progress meter
+put [-Ppr] local [remote]          Upload file
+pwd                                Display remote working directory
+quit                               Quit sftp
+rename oldpath newpath             Rename remote file
+rm path                            Delete remote file
+rmdir path                         Remove remote directory
+symlink oldpath newpath            Symlink remote file
+version                            Show SFTP version
+!command                           Execute 'command' in local shell
+!                                  Escape to local shell
+?                                  Synonym for help
+sftp> get remoteFile
+File "/home/cs17d21/remoteFile" not found.
+sftp> ls
+examples.desktop    
+sftp> cat > test.txt
+Invalid command.
+sftp> get examples.desktop 
+Fetching /home/cs17d21/examples.desktop to examples.desktop
+/home/cs17d21/examples.desktop                100% 8980     8.8KB/s   00:00    
+sftp> put process.sh
+stat process.sh: No such file or directory
+sftp> pwd
+Remote working directory: /home/cs17d21
+sftp> ls
+examples.desktop    
+sftp> put /home/s4d_21/s4d.txt
+stat /home/s4d_21/s4d.txt: No such file or directory
+sftp> scp /home/s4d_21/s4d.txt 
+Invalid command.
+sftp> scp /home/s4d_21/s4d.txt cs17d21@192.168.0.30/home
+Invalid command.
+sftp> lcd
+You must specify a path after a lcd command.
+sftp> lcd /home/s4d1/s4d_21/s4d.txt
+Couldn't change local directory to "/home/s4d1/s4d_21/s4d.txt": Not a directory
+sftp> lcd /home/s4d1/s4d_21/
+sftp> put s4d.txt
+Uploading s4d.txt to /home/cs17d21/s4d.txt
+s4d.txt                                       100% 3181     3.1KB/s   00:00    
+sftp> ls
+examples.desktop    s4d.txt             
+sftp> gedit s4d.txt
+Invalid command.
+sftp> lcd
+You must specify a path after a lcd command.
+sftp> pwd
+Remote working directory: /home/cs17d21
+sftp> lcd /home/s4d1/from_sr/
+Couldn't change local directory to "/home/s4d1/from_sr/": No such file or directory
+sftp> lcd /home/s4d_21/from_sr/
+Couldn't change local directory to "/home/s4d_21/from_sr/": No such file or directory
+sftp> lcd /home/s4d1/s4d_21/
+sftp> lcd /home/s4d1/s4d_21/from_sr
+sftp> get s4d.txt 
+Fetching /home/cs17d21/s4d.txt to s4d.txt
+/home/cs17d21/s4d.txt                         100% 3181     3.1KB/s   00:00    
+sftp> ls
+examples.desktop    s4d.txt             
+sftp> put -r to_sr
+stat to_sr: No such file or directory
+sftp> mkdir to_sr
+sftp> put -r to_sr
+stat to_sr: No such file or directory
+sftp> ls
+examples.desktop    s4d.txt             to_sr               
+sftp> put -r to_sr
+stat to_sr: No such file or directory
+sftp> lcd /home/s4d1/s4d_21/
+sftp> put -r to_sr
+stat to_sr: No such file or directory
+sftp> put to_sr
+stat to_sr: No such file or directory
+sftp> put -r to_sr
+stat to_sr: No such file or directory
+sftp> ls
+examples.desktop    s4d.txt             to_sr               
+sftp> cd to_sr
+sftp> ls
+sftp> cd
+You must specify a path after a cd command.
+sftp> pwd
+Remote working directory: /home/cs17d21/to_sr
+sftp> cd -
+Couldn't stat remote file: No such file or directory
+sftp> cd /home
+sftp> ls
+ask       cec       cs17d00   cs17d01   cs17d02   cs17d03   cs17d04   cs17d05   
+cs17d06   cs17d07   cs17d08   cs17d09   cs17d10   cs17d11   cs17d12   cs17d13   
+cs17d14   cs17d15   cs17d16   cs17d17   cs17d18   cs17d19   cs17d20   cs17d21   
+cs17d22   cs17d23   cs17d24   cs17d25   cs17d26   cs17d27   cs17d28   cs17d29   
+cs17d30   cs17d31   cs17d32   cs17d33   cs17d34   cs17d35   cs17d36   cs17d37   
+cs17d38   cs17d39   cs17d40   cs17d41   cs17d42   cs17d43   cs17d44   cs17d45   
+cs17d46   cs17d47   cs17d48   cs17d49   cs17d50   cs17d51   cs17d52   cs17d53   
+cs17d54   cs17d55   cs17d56   cs17d57   cs17d58   cs17d59   cs17d60   cs17d61   
+cs17d62   hari      ieeecec   
+sftp> cd /home/cs17d21
+sftp> ls
+examples.desktop    s4d.txt             to_sr               
+sftp> rmdir to_sr
+sftp> ls
+examples.desktop    s4d.txt             
+sftp> mkdir env_sgpa1
+sftp> ls
+env_sgpa1           examples.desktop    s4d.txt             
+sftp> cd env_sgpa1/
+sftp> lcd /home/s4d1/s4d_21/to_sr_final/env_sgpa1/
+sftp> put pr
+process.sh   process.sh~  
+sftp> put process.sh
+Uploading process.sh to /home/cs17d21/env_sgpa1/process.sh
+process.sh                                    100% 2042     2.0KB/s   00:00    
+sftp> put re
+result.txt      result_CHN.txt  
+sftp> put result.txt
+Uploading result.txt to /home/cs17d21/env_sgpa1/result.txt
+result.txt                                    100% 2035     2.0KB/s   00:00    
+sftp> put re
+result.txt      result_CHN.txt  
+sftp> put result_CHN.txt 
+Uploading result_CHN.txt to /home/cs17d21/env_sgpa1/result_CHN.txt
+result_CHN.txt                                100%   37KB  36.5KB/s   00:00    
+sftp> put s4d.txt 
+Uploading s4d.txt to /home/cs17d21/env_sgpa1/s4d.txt
+s4d.txt                                       100% 3181     3.1KB/s   00:00    
+sftp> ls
+process.sh      result.txt      result_CHN.txt  s4d.txt         
+sftp> cd /home/cs17d21/
+sftp> ls
+env_sgpa1           examples.desktop    s4d.txt             
+sftp> mkdir env_sgpa2
+sftp> cd env
+env_sgpa1/   env_sgpa2/   
+sftp> cd env_sgpa2/
+sftp> ls
+sftp> lcd /home/s4d1/s4d_21/to_sr_final/env_sgpa2/
+sftp> put re
+result.txt          result_CHN.txt      result_CHN.txt~     
+sftp> put result.txt
+Uploading result.txt to /home/cs17d21/env_sgpa2/result.txt
+result.txt                                    100% 2035     2.0KB/s   00:00    
+sftp> put re
+result.txt          result_CHN.txt      result_CHN.txt~     
+sftp> put result_
+result_CHN.txt      result_CHN.txt~     
+sftp> put result_CHN.txt
+Uploading result_CHN.txt to /home/cs17d21/env_sgpa2/result_CHN.txt
+result_CHN.txt                                100%   42KB  41.6KB/s   00:00    
+sftp> put process.sh 
+Uploading process.sh to /home/cs17d21/env_sgpa2/process.sh
+process.sh                                    100% 2042     2.0KB/s   00:00    
+sftp> put s4d.txt 
+Uploading s4d.txt to /home/cs17d21/env_sgpa2/s4d.txt
+s4d.txt                                       100% 3181     3.1KB/s   00:00    
+sftp> cd /home
+sftp> ls
+ask       cec       cs17d00   cs17d01   cs17d02   cs17d03   cs17d04   cs17d05   
+cs17d06   cs17d07   cs17d08   cs17d09   cs17d10   cs17d11   cs17d12   cs17d13   
+cs17d14   cs17d15   cs17d16   cs17d17   cs17d18   cs17d19   cs17d20   cs17d21   
+cs17d22   cs17d23   cs17d24   cs17d25   cs17d26   cs17d27   cs17d28   cs17d29   
+cs17d30   cs17d31   cs17d32   cs17d33   cs17d34   cs17d35   cs17d36   cs17d37   
+cs17d38   cs17d39   cs17d40   cs17d41   cs17d42   cs17d43   cs17d44   cs17d45   
+cs17d46   cs17d47   cs17d48   cs17d49   cs17d50   cs17d51   cs17d52   cs17d53   
+cs17d54   cs17d55   cs17d56   cs17d57   cs17d58   cs17d59   cs17d60   cs17d61   
+cs17d62   hari      ieeecec   
+sftp> cd /home/cs17d21
+sftp> ls
+env_sgpa1           env_sgpa2           examples.desktop    s4d.txt             
+sftp> mkdir env_cgpa
+sftp> ls
+env_cgpa            env_sgpa1           env_sgpa2           examples.desktop    
+s4d.txt             
+sftp> cd en
+env_cgpa/    env_sgpa1/   env_sgpa2/   
+sftp> cd env_cgpa/
+sftp> lcd /home/s4d1/s4d_21/to_sr_final/env_sgpa2sftp> lcd /home/s4d1/s4d_21/to_sr_final/env_sgp/
+Couldn't change local directory to "/home/s4d1/s4d_21/to_sr_final/env_sgp/": No such file or directory
+sftp> lcd /home/s4d1/s4d_21/to_sr_final/env_cgpa/
+sftp> ls
+cd /home/cs17d21\012                          -2147483648%  128TB   0.0KB/s   0sftp> ls
+sftp> ls
+sftp> put r
+result.txt      result1.txt     result2.txt     result2.txt~    
+sftp> put result1.txt 
+Uploading result1.txt to /home/cs17d21/env_cgpa/result1.txt
+result1.txt                                   100% 2035     2.0KB/s   00:00    
+sftp> put re
+result.txt      result1.txt     result2.txt     result2.txt~    
+sftp> put result2
+result2.txt     result2.txt~    
+sftp> put result2.txt
+Uploading result2.txt to /home/cs17d21/env_cgpa/result2.txt
+result2.txt                                   100% 2036     2.0KB/s   00:00    
+sftp> put re
+result.txt      result1.txt     result2.txt     result2.txt~    
+sftp> put result.txt
+Uploading result.txt to /home/cs17d21/env_cgpa/result.txt
+result.txt                                    100% 3058     3.0KB/s   00:00    
+sftp> put pro
+process.sh   process.sh~  
+sftp> put process.sh
+Uploading process.sh to /home/cs17d21/env_cgpa/process.sh
+process.sh                                    100% 1167     1.1KB/s   00:00    
+sftp> ls
+process.sh   result.txt   result1.txt  result2.txt  
+sftp> cd /home/cs17d21/
+sftp> ls
+env_cgpa            env_sgpa1           env_sgpa2           examples.desktop    
+s4d.txt             
+sftp> rm s4d.txt 
+Removing /home/cs17d21/s4d.txt
+sftp> ls
+env_cgpa            env_sgpa1           env_sgpa2           examples.desktop    
+sftp> exit
+root@CC2-24:/home/s4d1# 
