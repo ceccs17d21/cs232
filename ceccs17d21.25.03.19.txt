@@ -1,0 +1,494 @@
+root@CC2-24:/home/s4d1# ifconfig etho netmask 255.255.255.244
+SIOCSIFNETMASK: No such device
+root@CC2-24:/home/s4d1# ifconfig etho netmask 255.255.255.224
+SIOCSIFNETMASK: No such device
+root@CC2-24:/home/s4d1# ifconfig eth0 netmask 255.255.255.224
+root@CC2-24:/home/s4d1# ifconfig
+eth0      Link encap:Ethernet  HWaddr 38:d5:47:b8:da:8a  
+          inet addr:192.168.25.3  Bcast:192.168.25.31  Mask:255.255.255.224
+          inet6 addr: fe80::3ad5:47ff:feb8:da8a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:42316 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:18546 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:22586825 (22.5 MB)  TX bytes:2421676 (2.4 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:381 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:381 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:155436 (155.4 KB)  TX bytes:155436 (155.4 KB)
+
+root@CC2-24:/home/s4d1# cd
+root@CC2-24:~# cd ..
+root@CC2-24:/# ls
+bin    dev   initrd.img      lib64       mnt   root  srv  usr      vmlinuz.old
+boot   etc   initrd.img.old  lost+found  opt   run   sys  var
+cdrom  home  lib             media       proc  sbin  tmp  vmlinuz
+root@CC2-24:/# cd etc
+root@CC2-24:/etc# ls
+acpi                           hosts                    printcap
+adduser.conf                   hosts~                   profile
+alternatives                   hosts.allow              profile.d
+anacrontab                     hosts.deny               protocols
+apg.conf                       hp                       pulse
+apm                            ifplugd                  python
+apparmor                       init                     python2.7
+apparmor.d                     init.d                   python3
+apport                         initramfs-tools          python3.4
+apt                            inputrc                  rc0.d
+aptdaemon                      insserv                  rc1.d
+at-spi2                        insserv.conf             rc2.d
+avahi                          insserv.conf.d           rc3.d
+bash.bashrc                    iproute2                 rc4.d
+bash_completion                issue                    rc5.d
+bash_completion.d              issue.net                rc6.d
+bindresvport.blacklist         java-7-openjdk           rc.local
+blkid.conf                     kbd                      rcS.d
+blkid.tab                      kernel                   resolvconf
+bluetooth                      kernel-img.conf          resolv.conf
+brlapi.key                     kerneloops.conf          rmt
+brltty                         ldap                     rpc
+brltty.conf                    ld.so.cache              rsyslog.conf
+ca-certificates                ld.so.conf               rsyslog.d
+ca-certificates.conf           ld.so.conf.d             samba
+ca-certificates.conf.dpkg-old  legal                    sane.d
+calendar                       libaudit.conf            securetty
+chatscripts                    libnl-3                  security
+colord.conf                    libpaper.d               selinux
+compizconfig                   libreoffice              sensors3.conf
+console-setup                  lightdm                  sensors.d
+cracklib                       lintianrc                services
+cron.d                         locale.alias             sgml
+cron.daily                     localtime                shadow
+cron.hourly                    logcheck                 shadow-
+cron.monthly                   login.defs               shells
+crontab                        logrotate.conf           signond.conf
+cron.weekly                    logrotate.d              signon-ui
+cups                           lsb-release              skel
+cupshelpers                    ltrace.conf              speech-dispatcher
+dbus-1                         magic                    ssh
+dconf                          magic.mime               ssl
+debconf.conf                   mailcap                  subgid
+debian_version                 mailcap.order            subgid-
+default                        manpath.config           subuid
+deluser.conf                   mime.types               subuid-
+depmod.d                       mke2fs.conf              sudoers
+dhcp                           modprobe.d               sudoers.d
+dictionaries-common            modules                  sysctl.conf
+dnsmasq.d                      modules-load.d           sysctl.d
+doc-base                       mtab                     sysstat
+dpkg                           mtab.fuselock            systemd
+drirc                          mtools.conf              terminfo
+emacs                          mysql                    thunderbird
+environment                    nanorc                   timezone
+firefox                        netscsid.conf            ucf.conf
+fonts                          network                  udev
+fstab                          NetworkManager           udisks2
+fstab.d                        networks                 ufw
+fuse.conf                      newt                     updatedb.conf
+gai.conf                       nsswitch.conf            update-manager
+gconf                          obex-data-server         update-motd.d
+gdb                            opt                      update-notifier
+ghostscript                    os-release               UPower
+gnome                          pam.conf                 upstart-xsessions
+gnome-app-install              pam.d                    usb_modeswitch.conf
+groff                          papersize                usb_modeswitch.d
+group                          parallel                 vim
+group-                         passwd                   vtrgb
+grub.d                         passwd-                  wgetrc
+gshadow                        pcmcia                   wodim.conf
+gshadow-                       perl                     wpa_supplicant
+gtk-2.0                        pki                      X11
+gtk-3.0                        pm                       xdg
+hdparm.conf                    pnm2ppa.conf             xml
+host.conf                      polkit-1                 xul-ext
+hostname                       popularity-contest.conf  zsh_command_not_found
+hostname~                      ppp
+root@CC2-24:/etc# cd shsh
+bash: cd: shsh: No such file or directory
+root@CC2-24:/etc# cd ssh
+root@CC2-24:/etc/ssh# ls
+moduli            ssh_host_dsa_key.pub    ssh_host_ed25519_key.pub
+ssh_config        ssh_host_ecdsa_key      ssh_host_rsa_key
+sshd_config       ssh_host_ecdsa_key.pub  ssh_host_rsa_key.pub
+ssh_host_dsa_key  ssh_host_ed25519_key    ssh_import_id
+root@CC2-24:/etc/ssh# cd sshd_config 
+bash: cd: sshd_config: Not a directory
+root@CC2-24:/etc/ssh# gedit sshd_config 
+root@CC2-24:/etc/ssh# ifconfig
+eth0      Link encap:Ethernet  HWaddr 38:d5:47:b8:da:8a  
+          inet6 addr: fe80::3ad5:47ff:feb8:da8a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:60417 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:19504 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:24698240 (24.6 MB)  TX bytes:2567041 (2.5 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:628 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:628 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:266555 (266.5 KB)  TX bytes:266555 (266.5 KB)
+
+root@CC2-24:/etc/ssh# ifconfig -a
+eth0      Link encap:Ethernet  HWaddr 38:d5:47:b8:da:8a  
+          inet6 addr: fe80::3ad5:47ff:feb8:da8a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:60419 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:19507 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:24698689 (24.6 MB)  TX bytes:2567832 (2.5 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:628 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:628 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:266555 (266.5 KB)  TX bytes:266555 (266.5 KB)
+
+root@CC2-24:/etc/ssh# ifconfig eth0 192.168.25.1
+root@CC2-24:/etc/ssh# ifconfig
+eth0      Link encap:Ethernet  HWaddr 38:d5:47:b8:da:8a  
+          inet addr:192.168.25.1  Bcast:192.168.25.255  Mask:255.255.255.0
+          inet6 addr: fe80::3ad5:47ff:feb8:da8a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:60439 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:19550 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:24703468 (24.7 MB)  TX bytes:2576424 (2.5 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:628 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:628 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:266555 (266.5 KB)  TX bytes:266555 (266.5 KB)
+
+root@CC2-24:/etc/ssh# ifconfig eth0 netmask 255.255.255.224
+SIOCSIFNETMASK: Cannot assign requested address
+root@CC2-24:/etc/ssh# ifconfig eth0 netmask 255.255.255.225
+SIOCSIFNETMASK: Cannot assign requested address
+root@CC2-24:/etc/ssh# ifconfig eth0 netmask 255.255.255.224
+SIOCSIFNETMASK: Cannot assign requested address
+root@CC2-24:/etc/ssh# ifconfig eth0 netmask 255.255.255.0
+SIOCSIFNETMASK: Cannot assign requested address
+root@CC2-24:/etc/ssh# cd
+root@CC2-24:~# cd ..
+root@CC2-24:/# ifconfig
+eth0      Link encap:Ethernet  HWaddr 38:d5:47:b8:da:8a  
+          inet addr:192.168.5.74  Bcast:192.168.5.255  Mask:255.255.255.0
+          inet6 addr: fe80::3ad5:47ff:feb8:da8a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:60526 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:19665 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:24725476 (24.7 MB)  TX bytes:2596933 (2.5 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:628 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:628 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:266555 (266.5 KB)  TX bytes:266555 (266.5 KB)
+
+root@CC2-24:/# ifconfig eth0 192.168.25.5
+root@CC2-24:/# ifconfig
+eth0      Link encap:Ethernet  HWaddr 38:d5:47:b8:da:8a  
+          inet addr:192.168.25.5  Bcast:192.168.25.255  Mask:255.255.255.0
+          inet6 addr: fe80::3ad5:47ff:feb8:da8a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:14140975 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:19676 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2094222859 (2.0 GB)  TX bytes:2598778 (2.5 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:628 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:628 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:266555 (266.5 KB)  TX bytes:266555 (266.5 KB)
+
+root@CC2-24:/# sftp ceccs17d21@192.168.0.30
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+ceccs17d21@192.168.0.30's password: 
+Permission denied, please try again.
+ceccs17d21@192.168.0.30's password: 
+Permission denied, please try again.
+ceccs17d21@192.168.0.30's password: 
+root@CC2-24:/# cs17d21@192.168.0.1
+cs17d21@192.168.0.1: command not found
+root@CC2-24:/# sftp cs17d21@192.168.0.1
+^[[A^Croot@CC2-24:/# sftp cs17d21@192.168.0.30
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+cs17d21@192.168.0.30's password: 
+Connected to 192.168.0.30.
+sftp> cd
+You must specify a path after a cd command.
+sftp> ls
+env_cgpa            env_sgpa1           env_sgpa2           examples.desktop    
+sftp> exit
+exit
+root@CC2-24:/# scp cs17d21@192.168.0.30
+usage: scp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
+           [-l limit] [-o ssh_option] [-P port] [-S program]
+           [[user@]host1:]file1 ... [[user@]host2:]file2
+root@CC2-24:/# sudo apt-get install openssh-client
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+openssh-client is already the newest version.
+openssh-client set to manually installed.
+The following packages were automatically installed and are no longer required:
+  account-plugin-windows-live libdbusmenu-gtk4 libntdb1 libqpdf13
+  libufe-xidgetter0 libupstart1 python-ntdb webaccounts-extension-common
+  xul-ext-websites-integration
+Use 'apt-get autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 31 not upgraded.
+root@CC2-24:/# ssh cs17d21@192.168.0.30
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+cs17d21@192.168.0.30's password: 
+Welcome to elementary OS 0.4.1 Loki (GNU/Linux 4.13.0-32-generic x86_64)
+
+ * Website:  http://elementary.io/
+
+278 packages can be updated.
+0 updates are security updates.
+
+Last login: Tue Mar 12 06:58:17 2019 from 59.99.36.252
+$ lpwd
+-sh: 1: lpwd: not found
+$ lcd
+-sh: 2: lcd: not found
+$ ls
+env_cgpa  env_sgpa1  env_sgpa2	examples.desktop
+$ sync -av 192.168.20.10:Desktop/todo.txt ~/Desktop/t^C                 
+$ exit                        
+Connection to 192.168.0.30 closed.
+root@CC2-24:/# ifconfig
+eth0      Link encap:Ethernet  HWaddr 38:d5:47:b8:da:8a  
+          inet addr:192.168.0.214  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::3ad5:47ff:feb8:da8a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:15947872 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:28540 errors:0 dropped:94 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2387083421 (2.3 GB)  TX bytes:3545730 (3.5 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1056 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1056 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:472361 (472.3 KB)  TX bytes:472361 (472.3 KB)
+
+root@CC2-24:/# ifconfig
+eth0      Link encap:Ethernet  HWaddr 38:d5:47:b8:da:8a  
+          inet addr:192.168.0.214  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::3ad5:47ff:feb8:da8a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:15948112 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:28540 errors:0 dropped:94 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2387100328 (2.3 GB)  TX bytes:3545730 (3.5 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1056 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1056 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:472361 (472.3 KB)  TX bytes:472361 (472.3 KB)
+
+root@CC2-24:/# ssh cs17d21@192.168.0.30
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+cs17d21@192.168.0.30's password: 
+Welcome to elementary OS 0.4.1 Loki (GNU/Linux 4.13.0-32-generic x86_64)
+
+ * Website:  http://elementary.io/
+
+278 packages can be updated.
+0 updates are security updates.
+
+Last login: Mon Mar 25 11:03:28 2019 from 192.168.0.214
+$ exit
+Connection to 192.168.0.30 closed.
+root@CC2-24:/# ifconfig
+eth0      Link encap:Ethernet  HWaddr 38:d5:47:b8:da:8a  
+          inet addr:192.168.0.214  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::3ad5:47ff:feb8:da8a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:15954203 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:29008 errors:0 dropped:94 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2387671037 (2.3 GB)  TX bytes:3608211 (3.6 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1056 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1056 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:472361 (472.3 KB)  TX bytes:472361 (472.3 KB)
+
+root@CC2-24:/# ssh cs17d21@192.168.0.30
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+cs17d21@192.168.0.30's password: 
+Welcome to elementary OS 0.4.1 Loki (GNU/Linux 4.13.0-32-generic x86_64)
+
+ * Website:  http://elementary.io/
+
+278 packages can be updated.
+0 updates are security updates.
+
+Last login: Mon Mar 25 11:15:41 2019 from 192.168.0.214
+$ ls
+env_cgpa  env_sgpa1  env_sgpa2	examples.desktop
+$ exit
+Connection to 192.168.0.30 closed.
+root@CC2-24:/# sftp cs17d21@192.168.0.30
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+cs17d21@192.168.0.30's password: 
+Connected to 192.168.0.30.
+sftp> pwd
+Remote working directory: /home/cs17d21
+sftp> lcd
+You must specify a path after a lcd command.
+sftp> lpwd
+Local working directory: /
+sftp> lcd /home/s4d1
+sftp> lpwd
+Local working directory: /home/s4d1
+sftp> lcd serv_sync
+sftp> lpwd
+Local working directory: /home/s4d1/serv_sync
+sftp> put sync.txt
+Uploading sync.txt to /home/cs17d21/sync.txt
+sync.txt                                      100%   21     0.0KB/s   00:00    
+sftp> ls
+env_cgpa            env_sgpa1           env_sgpa2           examples.desktop    
+sync.txt            
+sftp> exit
+root@CC2-24:/# ssh cs17d21@192.168.0.30
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+cs17d21@192.168.0.30's password: 
+Welcome to elementary OS 0.4.1 Loki (GNU/Linux 4.13.0-32-generic x86_64)
+
+ * Website:  http://elementary.io/
+
+278 packages can be updated.
+0 updates are security updates.
+
+Last login: Mon Mar 25 11:30:07 2019 from 192.168.0.214
+$ rsync -av 192.168.0.214:serv_sync/sync.txt ~/home/cs17d21/sync.txt
+The authenticity of host '192.168.0.214 (192.168.0.214)' can't be established.
+ECDSA key fingerprint is SHA256:iM02vC4KJydKSD0ZYWJozXqs3YCvtE4BvvP8EwQptws.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.0.214' (ECDSA) to the list of known hosts.
+cs17d21@192.168.0.214's password: 
+Permission denied, please try again.
+cs17d21@192.168.0.214's password: 
+Permission denied, please try again.
+cs17d21@192.168.0.214's password: 
+rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at rsync.c(638) [Receiver=3.1.1]
+$ ls                      
+env_cgpa  env_sgpa1  env_sgpa2	examples.desktop  sync.txt
+$ rsync -av ~/serv_sync/sync.txt 192.168.0.214:^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^exit                           
+sending incremental file list
+rsync: change_dir "/home/cs17d21/serv_sync" failed: No such file or directory (2)
+
+sent 20 bytes  received 12 bytes  64.00 bytes/sec
+total size is 0  speedup is 0.00
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.1]
+$ exit
+Connection to 192.168.0.30 closed.
+root@CC2-24:/# ssh cs17d21@192.168.0.30
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+cs17d21@192.168.0.30's password: 
+Welcome to elementary OS 0.4.1 Loki (GNU/Linux 4.13.0-32-generic x86_64)
+
+ * Website:  http://elementary.io/
+
+278 packages can be updated.
+0 updates are security updates.
+
+Last login: Mon Mar 25 11:45:59 2019 from 192.168.0.214
+$ lpwd
+-sh: 1: lpwd: not found
+$ scp a.txt cs17d21@192.168.0.30
+cp: cannot stat 'a.txt': No such file or directory
+$ ls
+env_cgpa  env_sgpa1  env_sgpa2	examples.desktop  sync.txt
+$ scp /home/s4d1/a.txt cs17d21@192.168.0.30:/home/cs17d21
+The authenticity of host '192.168.0.30 (192.168.0.30)' can't be established.
+ECDSA key fingerprint is SHA256:pkLWQEXAwg4Zdh5CXNYydUTPcU7dwDFxyzJnqJ01m/s.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.0.30' (ECDSA) to the list of known hosts.
+.
+              |
+.  .    . .-. | .-..-. .--.--. .-.
+ \  \  / (.-' |(  (   )|  |  |(.-'
+  `' `'   `--'` `-'`-' '  '  ` `--'
+cs17d21@192.168.0.30's password: 
+/home/s4d1/a.txt: No such file or directory
+$ ls
+env_cgpa  env_sgpa1  env_sgpa2	examples.desktop  sync.txt
+$ exit
+Connection to 192.168.0.30 closed.
+root@CC2-24:/# exit
+exit
+s4d1@CC2-24:~$ exit
+exit
+Script done, file is ifconfig.txt
+s4d1@CC2-24:~/s4d_21/script_file$ 
