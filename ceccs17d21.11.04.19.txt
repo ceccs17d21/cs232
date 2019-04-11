@@ -1,0 +1,179 @@
+sudo mkdir -p /var/www/cs17d21.com/html
+
+sudo chown -R $USER:$USER /var/www/cs17d21.com/html
+
+nano /var/www/cs17d21.com/html/index.html
+
+sudo nano /etc/apache2/sites-available/cs17d21.com.conf
+
+sudo a2ensite cs17d21.com.conf
+
+sudo a2dissite jo.com.conf
+
+sudo a2dissite 000-default.conf
+
+Script started on 2019-04-11 09:01:52+0530
+
+georgi@jo:~$ ifconfig
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.105  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::74ec:de16:7bf:9498  prefixlen 64  scopeid 0x20<link>
+        ether 3c:52:82:07:b3:b4  txqueuelen 1000  (Ethernet)
+        RX packets 737  bytes 59493 (59.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 33  bytes 4440 (4.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 511  bytes 39145 (39.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 511  bytes 39145 (39.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+georgi@jo:~$ sudo systemctl start apache2
+[sudo] password for georgi: 
+georgi@jo:~$ ^C
+georgi@jo:~$ cd /
+georgi@jo:/$ ls
+bin          dev         initrd.img.old  media  root  srv  var
+boot         etc         lib             mnt    run   sys  vmlinuz
+cdrom        home        lib64           opt    sbin  tmp  vmlinuz.old
+data.tar.gz  initrd.img  lost+found      proc   snap  usr
+georgi@jo:/$ cd var/
+georgi@jo:/var$ ls
+backups  crash  local  log   metrics  run   spool  www
+cache    lib    lock   mail  opt      snap  tmp
+georgi@jo:/var$ cd www/
+georgi@jo:/var/www$ ls
+example.com  html  jo.com
+georgi@jo:/var/www$ cd jo.com/
+georgi@jo:/var/www/jo.com$ ls
+html
+georgi@jo:/var/www/jo.com$ cd ..
+georgi@jo:/var/www$ ls
+example.com  html  jo.com
+georgi@jo:/var/www$ cd html/
+georgi@jo:/var/www/html$ ls
+index.html  index.nginx-debian.html
+georgi@jo:/var/www/html$ gedit index.
+georgi@jo:/var/www/html$ gedit index.html
+georgi@jo:/var/www/html$ cd
+georgi@jo:~$ sudo systemctl stop apache
+[sudo] password for georgi: 
+Failed to stop apache.service: Unit apache.service not loaded.
+georgi@jo:~$ sudo systemctl stop apache2
+georgi@jo:~$ sudo systemctl status apache2
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: 
+   Active: inactive (dead) since Thu 2019-04-11 09:37:26 IST; 7min ago
+  Process: 6429 ExecStop=/usr/sbin/apachectl stop (code=exited, status=0/SUCCESS
+  Process: 1640 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCE
+ Main PID: 2020 (code=exited, status=0/SUCCESS)
+
+Apr 11 09:06:27 jo systemd[1]: Starting The Apache HTTP Server...
+Apr 11 09:06:33 jo apachectl[1640]: AH00558: apache2: Could not reliably determi
+Apr 11 09:06:33 jo systemd[1]: Started The Apache HTTP Server.
+Apr 11 09:37:26 jo systemd[1]: Stopping The Apache HTTP Server...
+Apr 11 09:37:26 jo apachectl[6429]: AH00558: apache2: Could not reliably determi
+Apr 11 09:37:26 jo systemd[1]: Stopped The Apache HTTP Server.
+
+georgi@jo:~$ sudo systemctl disable apache2
+Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable apache2
+georgi@jo:~$ sudo systemctl enable apache2
+Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+georgi@jo:~$ sudo a2dissite jo.com.conf
+Site jo.com disabled.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+georgi@jo:~$ sudo a2ensite 000-default.conf
+Enabling site 000-default.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+georgi@jo:~$ sudo systemctl reload apache2
+apache2.service is not active, cannot reload.
+georgi@jo:~$ ls
+Android                inkscape_temp       Pictures            softwares
+AndroidStudioProjects  ML                  Public              Templates
+Desktop                Music               rtlwifi_new         Videos
+Documents              mySpecs.html        rtlwifi_new-master  www
+Downloads              nginx_default.html  rtlwifi-next
+examples.desktop       npm-debug.log       snap
+georgi@jo:~$ sudo systemctl reload apache2
+apache2.service is not active, cannot reload.
+georgi@jo:~$ sudo systemctl reload apache2
+apache2.service is not active, cannot reload.
+georgi@jo:~$ ^C
+georgi@jo:~$ apachectl stop
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.0.105. Set the 'ServerName' directive globally to suppress this message
+httpd (no pid file) not running
+georgi@jo:~$ /etc/init.d/apache2 start
+[ ok ] Starting apache2 (via systemctl): apache2.service.
+georgi@jo:~$ /etc/init.d/apache2 stop
+[ ok ] Stopping apache2 (via systemctl): apache2.service.
+georgi@jo:~$ apachectl stop
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.0.105. Set the 'ServerName' directive globally to suppress this message
+httpd (no pid file) not running
+georgi@jo:~$ /etc/init.d/apache2 stop
+[ ok ] Stopping apache2 (via systemctl): apache2.service.
+georgi@jo:~$ sudo mkdir -p /var/www/example.com/html
+georgi@jo:~$ cd /var/www/
+georgi@jo:/var/www$ ls
+example.com  html  jo.com
+georgi@jo:/var/www$ sudo rmdir example.com/
+rmdir: failed to remove 'example.com/': Directory not empty
+georgi@jo:/var/www$ example.com/
+bash: example.com/: Is a directory
+georgi@jo:/var/www$ cd example.com/
+georgi@jo:/var/www/example.com$ ls
+html
+georgi@jo:/var/www/example.com$ cd html/
+georgi@jo:/var/www/example.com/html$ ls
+index.html
+georgi@jo:/var/www/example.com/html$ sudo rm index.html 
+georgi@jo:/var/www/example.com/html$ cd ..
+georgi@jo:/var/www/example.com$ sudo rmdir html/
+georgi@jo:/var/www/example.com$ ls
+georgi@jo:/var/www/example.com$ cd ..
+georgi@jo:/var/www$ ls
+example.com  html  jo.com
+georgi@jo:/var/www$ sudo rmdir example.com/
+georgi@jo:/var/www$ sudo mkdir -p /var/www/cs17d21.com/html
+georgi@jo:/var/www$ ls
+cs17d21.com  html  jo.com
+georgi@jo:/var/www$ l
+cs17d21.com/  html/  jo.com/
+georgi@jo:/var/www$ cd cs17d21.com/
+georgi@jo:/var/www/cs17d21.com$ ls
+html
+georgi@jo:/var/www/cs17d21.com$  cd html/
+georgi@jo:/var/www/cs17d21.com/html$ ls
+georgi@jo:/var/www/cs17d21.com/html$ sudo chown -R $USER:$USER /var/www/cs17d21.com/html
+georgi@jo:/var/www/cs17d21.com/html$ sudo chmod -R 755 /var/www/cs17d21.com
+georgi@jo:/var/www/cs17d21.com/html$ nano /var/www/cs17d21.com/html/index.html
+georgi@jo:/var/www/cs17d21.com/html$ nano /var/www/cs17d21.com/html/index.html
+georgi@jo:/var/www/cs17d21.com/html$ sudo nano /etc/apache2/sites-available/cs17d21.com.conf
+georgi@jo:/var/www/cs17d21.com/html$ sudo a2ensite cs17d21.com.conf
+Enabling site cs17d21.com.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+georgi@jo:/var/www/cs17d21.com/html$ systemctl reload apache2
+apache2.service is not active, cannot reload.
+georgi@jo:/var/www/cs17d21.com/html$ sudo a2ensite cs17d21.com.conf
+Site cs17d21.com already enabled
+georgi@jo:/var/www/cs17d21.com/html$ sudo a2dissite 000-default.conf
+Site 000-default disabled.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+georgi@jo:/var/www/cs17d21.com/html$ sudo a2ensite cs17d21.com.conf
+Site cs17d21.com already enabled
+georgi@jo:/var/www/cs17d21.com/html$ sudo apache2ctl configtest
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.0.105. Set the 'ServerName' directive globally to suppress this message
+Syntax OK
+georgi@jo:/var/www/cs17d21.com/html$ sudo systemctl restart apache2
+
+Script done on 2019-04-11 11:23:34+0530
