@@ -1,0 +1,164 @@
+georgi@jo:~$ sudo ufw app list
+Available applications:
+  Apache
+  Apache Full
+  Apache Secure
+  CUPS
+  Nginx Full
+  Nginx HTTP
+  Nginx HTTPS
+  OpenSSH
+georgi@jo:~$ sudo ufw app info "Apache Full"
+Profile: Apache Full
+Title: Web Server (HTTP,HTTPS)
+Description: Apache v2 is the next generation of the omnipresent Apache web
+server.
+
+Ports:
+  80,443/tcp
+georgi@jo:~$ sudo ufw allow in "Apache Full"
+Rule added
+Rule added (v6)
+georgi@jo:~$ 
+georgi@jo:~$ 
+georgi@jo:~$     sudo apt install php libapache2-mod-php php-mysql
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  gyp libc-ares2 libhttp-parser2.8 libjs-async libjs-inherits
+  libjs-is-typedarray libjs-node-uuid libssl1.0-dev libuv1 libuv1-dev
+  nodejs-doc
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libapache2-mod-php7.2 php-common php7.2 php7.2-cli php7.2-common php7.2-json
+  php7.2-mysql php7.2-opcache php7.2-readline
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libapache2-mod-php libapache2-mod-php7.2 php php-common php-mysql php7.2
+  php7.2-cli php7.2-common php7.2-json php7.2-mysql php7.2-opcache
+  php7.2-readline
+0 upgraded, 12 newly installed, 0 to remove and 53 not upgraded.
+Need to get 4,067 kB of archives.
+After this operation, 18.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://in.archive.ubuntu.com/ubuntu cosmic/main amd64 php-common all 1:62 [11.9 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 php7.2-common amd64 7.2.17-0ubuntu0.18.10.1 [888 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 php7.2-json amd64 7.2.17-0ubuntu0.18.10.1 [18.9 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 php7.2-opcache amd64 7.2.17-0ubuntu0.18.10.1 [166 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 php7.2-readline amd64 7.2.17-0ubuntu0.18.10.1 [12.3 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 php7.2-cli amd64 7.2.17-0ubuntu0.18.10.1 [1,444 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 libapache2-mod-php7.2 amd64 7.2.17-0ubuntu0.18.10.1 [1,388 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu cosmic/main amd64 libapache2-mod-php all 1:7.2+62 [2,956 B]
+Get:9 http://in.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 php7.2 all 7.2.17-0ubuntu0.18.10.1 [9,244 B]
+Get:10 http://in.archive.ubuntu.com/ubuntu cosmic/main amd64 php all 1:7.2+62 [2,828 B]
+Get:11 http://in.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 php7.2-mysql amd64 7.2.17-0ubuntu0.18.10.1 [119 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu cosmic/main amd64 php-mysql all 1:7.2+62 [2,000 B]
+Fetched 4,067 kB in 30s (136 kB/s)                                             
+Selecting previously unselected package php-common.
+(Reading database ... 158668 files and directories currently installed.)
+Preparing to unpack .../00-php-common_1%3a62_all.deb ...
+Unpacking php-common (1:62) ...
+Selecting previously unselected package php7.2-common.
+Preparing to unpack .../01-php7.2-common_7.2.17-0ubuntu0.18.10.1_amd64.deb ...
+Unpacking php7.2-common (7.2.17-0ubuntu0.18.10.1) ...
+Selecting previously unselected package php7.2-json.
+Preparing to unpack .../02-php7.2-json_7.2.17-0ubuntu0.18.10.1_amd64.deb ...
+Unpacking php7.2-json (7.2.17-0ubuntu0.18.10.1) ...
+Selecting previously unselected package php7.2-opcache.
+Preparing to unpack .../03-php7.2-opcache_7.2.17-0ubuntu0.18.10.1_amd64.deb ...
+Unpacking php7.2-opcache (7.2.17-0ubuntu0.18.10.1) ...
+Selecting previously unselected package php7.2-readline.
+Preparing to unpack .../04-php7.2-readline_7.2.17-0ubuntu0.18.10.1_amd64.deb ...
+Unpacking php7.2-readline (7.2.17-0ubuntu0.18.10.1) ...
+Selecting previously unselected package php7.2-cli.
+Preparing to unpack .../05-php7.2-cli_7.2.17-0ubuntu0.18.10.1_amd64.deb ...
+Unpacking php7.2-cli (7.2.17-0ubuntu0.18.10.1) ...
+Selecting previously unselected package libapache2-mod-php7.2.
+Preparing to unpack .../06-libapache2-mod-php7.2_7.2.17-0ubuntu0.18.10.1_amd64.deb ...
+Unpacking libapache2-mod-php7.2 (7.2.17-0ubuntu0.18.10.1) ...
+Selecting previously unselected package libapache2-mod-php.
+Preparing to unpack .../07-libapache2-mod-php_1%3a7.2+62_all.deb ...
+Unpacking libapache2-mod-php (1:7.2+62) ...
+Selecting previously unselected package php7.2.
+Preparing to unpack .../08-php7.2_7.2.17-0ubuntu0.18.10.1_all.deb ...
+Unpacking php7.2 (7.2.17-0ubuntu0.18.10.1) ...
+Selecting previously unselected package php.
+Preparing to unpack .../09-php_1%3a7.2+62_all.deb ...
+Unpacking php (1:7.2+62) ...
+Selecting previously unselected package php7.2-mysql.
+Preparing to unpack .../10-php7.2-mysql_7.2.17-0ubuntu0.18.10.1_amd64.deb ...
+Unpacking php7.2-mysql (7.2.17-0ubuntu0.18.10.1) ...
+Selecting previously unselected package php-mysql.
+Preparing to unpack .../11-php-mysql_1%3a7.2+62_all.deb ...
+Unpacking php-mysql (1:7.2+62) ...
+Setting up php-common (1:62) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+Processing triggers for man-db (2.8.4-2) ...
+Setting up php7.2-common (7.2.17-0ubuntu0.18.10.1) ...
+
+Creating config file /etc/php/7.2/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/exif.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/phar.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/posix.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/tokenizer.ini with new version
+Setting up php7.2-readline (7.2.17-0ubuntu0.18.10.1) ...
+
+Creating config file /etc/php/7.2/mods-available/readline.ini with new version
+Setting up php7.2-json (7.2.17-0ubuntu0.18.10.1) ...
+
+Creating config file /etc/php/7.2/mods-available/json.ini with new version
+Setting up php7.2-opcache (7.2.17-0ubuntu0.18.10.1) ...
+
+Creating config file /etc/php/7.2/mods-available/opcache.ini with new version
+Setting up php7.2-mysql (7.2.17-0ubuntu0.18.10.1) ...
+
+Creating config file /etc/php/7.2/mods-available/mysqlnd.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/mysqli.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/pdo_mysql.ini with new version
+Setting up php7.2-cli (7.2.17-0ubuntu0.18.10.1) ...
+update-alternatives: using /usr/bin/php7.2 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar7.2 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar7.2 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+
+Creating config file /etc/php/7.2/cli/php.ini with new version
+Setting up libapache2-mod-php7.2 (7.2.17-0ubuntu0.18.10.1) ...
+
+Creating config file /etc/php/7.2/apache2/php.ini with new version
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+apache2_switch_mpm Switch to prefork
+apache2_invoke: Enable module php7.2
+Setting up php-mysql (1:7.2+62) ...
+Setting up libapache2-mod-php (1:7.2+62) ...
+Setting up php7.2 (7.2.17-0ubuntu0.18.10.1) ...
+Setting up php (1:7.2+62) ...
