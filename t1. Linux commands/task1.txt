@@ -1,0 +1,213 @@
+Script started on 2019-04-25 20:09:57+05:30
+georgi@jo:~/Documents/script/scriptfiles$ script task1.txt
+Script started, file is task1.txt
+georgi@jo:~/Documents/script/scriptfiles$ ls
+commands.txt  files  task1.txt
+georgi@jo:~/Documents/script/scriptfiles$ mkdir env1
+georgi@jo:~/Documents/script/scriptfiles$ cd env1
+georgi@jo:~/Documents/script/scriptfiles/env1$ mkdir files
+georgi@jo:~/Documents/script/scriptfiles/env1$ cd files
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ cat > abc.txt
+9
+8
+7
+6
+5
+4
+3
+2
+1
+11
+12
+13
+^C
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ cat >> abc.txt 
+14 
+16
+15
+^C
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ cat abc.txt 
+9
+8
+7
+6
+5
+4
+3
+2
+1
+11
+12
+13
+14
+16
+15
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ mkdir test
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ cd test
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ cat > a.txt
+A
+^C
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ 
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ cat >b.txt
+B
+^C
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ 
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ cat > c.txt
+C
+^C
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ ls
+a.txt  b.txt  c.txt
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ ls -l
+total 12
+-rw-r--r-- 1 georgi georgi 2 Apr 25 20:12 a.txt
+-rw-r--r-- 1 georgi georgi 2 Apr 25 20:12 b.txt
+-rw-r--r-- 1 georgi georgi 2 Apr 25 20:12 c.txt
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ ls -lt
+total 12
+-rw-r--r-- 1 georgi georgi 2 Apr 25 20:12 c.txt
+-rw-r--r-- 1 georgi georgi 2 Apr 25 20:12 b.txt
+-rw-r--r-- 1 georgi georgi 2 Apr 25 20:12 a.txt
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ ls -ltr
+total 12
+-rw-r--r-- 1 georgi georgi 2 Apr 25 20:12 a.txt
+-rw-r--r-- 1 georgi georgi 2 Apr 25 20:12 b.txt
+-rw-r--r-- 1 georgi georgi 2 Apr 25 20:12 c.txt
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ ls ab* -d
+ls: cannot access 'ab*': No such file or directory
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ ls a* -d
+a.txt
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ rm c.txt 
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ ls
+a.txt  b.txt
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ cd ..
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ ls
+abc.txt  test
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ rm test/*
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ ls
+abc.txt  test
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ cd test
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ ls
+georgi@jo:~/Documents/script/scriptfiles/env1/files/test$ cd ..
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ rmdir test
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ sort -n abc.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+11
+12
+13
+14
+15
+16
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ sort -nk7 abc.txt 
+1
+11
+12
+13
+14
+15
+16
+2
+3
+4
+5
+6
+7
+8
+9
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ sort -r abc.txt 
+9
+8
+7
+6
+5
+4
+3
+2
+16
+15
+14
+13
+12
+11
+1
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ sort -rnk7 abc.txt 9
+8
+7
+6
+5
+4
+3
+2
+16
+15
+14
+13
+12
+11
+1
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ sort -rn abc.txt 
+16
+15
+14
+13
+12
+11
+9
+8
+7
+6
+5
+4
+3
+2
+1
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ sort -t'$\t' -k7 abc.txt 
+sort: multi-character tab ‘$\\t’
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ cat > a.txt
+a a a a a
+^C
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ 
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ cat > b.txt
+b b b b b
+^C
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ join a
+abc.txt  a.txt    
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ join a
+abc.txt  a.txt    
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ join a.txt b.txt 
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ ls
+abc.txt  a.txt  b.txt
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ cat a.txt 
+a a a a a
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ cat b.txt 
+b b b b b
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ grep -c a.txt b.txt 
+0
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ grep -w a.txt c.txt 
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ cat > pqr.txt
+hello world
+foss lab
+cs17d21
+^C
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ grep -i 'Hello' pqr.txt 
+hello world
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ grep -w 'Hello' pqr.txt 
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ grep -w 'hello' pqr.txt 
+hello world
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ grep -c 'a' a.txt
+1
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ grep -c '1' abc.txt 
+7
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ mv c.txt /home/georgi/Desktop/
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ mv /home/georgi/Desktop/c.txt /home/georgi/Documents/script/scriptfiles/env1/files/
+georgi@jo:~/Documents/script/scriptfiles/env1/files$ exit
+exit
+
+Script done on 2019-04-25 20:54:33+05:30
