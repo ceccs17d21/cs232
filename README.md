@@ -1,5 +1,5 @@
 # cs232
-###### S4D CS232 Free and Open Source Software Lab  [(cs17d21)](http://192.168.0.17/cs17d/cs17d21)
+###### S4D CS232 Free and Open Source Software Lab  [(cs17d21)](http://http://14.139.189.217/cs17d/cs17d21)
 <details>
   <summary> Material/Tasks </summary>
   (t1)  Linux commands<br><br>
