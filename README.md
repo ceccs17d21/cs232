@@ -59,7 +59,7 @@ The pages could be accessed as http://192.168.0.30/cs17d/cs17dxx<br>
 - [x] **t5**. ftp usage 
 - [x] **t6**. Linux installation
 - [x] **t7**. Server setup
-  - [ ] 1. ftp server
+  - [x] 1. ftp server
   - [x] 1. http server
 - [x] **t8**. Further tasks
   - [x] 1. Package management
