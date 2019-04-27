@@ -61,9 +61,9 @@ The pages could be accessed as http://192.168.0.30/cs17d/cs17dxx<br>
 - [x] **t7**. Server setup
   - [ ] 1. ftp server
   - [x] 1. http server
-- [ ] **t8**. Further tasks
-  - [ ] 1. Package management
+- [x] **t8**. Further tasks
+  - [x] 1. Package management
   - [x] 2. perl
   - [x] 3. LAMP stack
-  - [ ] 4. Kernel compilation
+  - [x] 4. Kernel compilation
 - [x] **t9**. Create own web page
