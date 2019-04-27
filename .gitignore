@@ -1,0 +1,6 @@
+*.pyc
+*~
+t8_Further_tasks/Kernel_compilation/linux-4.20.12
+t8_Further_tasks/Kernel_compilation/linux-4.20.12.tar
+t8_Further_tasks/Kernel_compilation/linux-4.20.12.tar.sign
+.DS_Store
